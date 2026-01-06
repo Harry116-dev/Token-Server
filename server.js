@@ -1,10 +1,11 @@
 import express from 'express';
 import { createCipheriv } from 'crypto';
 import { generateToken04 } from './token.js';
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
-
+app.use(cors());
 const appId = 1042883316;
 const ZEGO_SECRET = "35aaa1b6438edd7e612afd34af9e77f5";
 /* ================== TOKEN UTILS ================== */
